@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>RandomCardGen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cardo&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -14,18 +20,30 @@
   </head>
   <body>
     <div class="container-fluid">
-      <div class="container pt-3 d-flex justify-content-center">
-        <div class="card vertical-rectangle-card">
-          <!-- Card content goes here -->
-          <div class="d-flex flex-column">  
-              <p id="cardSuite1"></p>
-              <p id="cardSuite2"></p>
-              <h1 class="card-title" id="cardNumber"></h1>
-              <p id="cardSuite3"></p>
-              <p id="cardSuite4"></p>
-            <p class="card-text"></p>
+      <div class="d-flex justify-content-center">
+        <button
+          type="button"
+          class="btn-outline-danger btn-lg mt-5 d-flex align-self-center"
+          id="dealCard"
+        >
+          Change Card
+        </button>
+      </div>
+      <div class="container pt-3 mt-3 d-flex justify-content-center">
+        <div
+          class="card vertical-rectangle-card d-flex flex-column container-fluid justify-content-between"
+        >
+          <div class="d-flex justify-content-between pt-3">
+            <p id="cardSuite1" class="ps-3"></p>
+            <p id="cardSuite2" class="pe-3"></p>
           </div>
-        </div> 
+          <h1 class="card-title align-self-center" id="cardNumber"></h1>
+          <div class="d-flex justify-content-between">
+            <p id="cardSuite3" class="ps-3"></p>
+            <p id="cardSuite4" class="pe-3"></p>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

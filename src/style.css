@@ -10,26 +10,38 @@ body {
   background-color: white;
 }
 
-.card-title {
-  font-size: 55px;
+.card-title-red {
+  font-size: 135px;
+  font-family: "Cardo", serif;
+  color: red;
+}
+
+.card-title-black {
+  font-size: 135px;
+  font-family: "Cardo", serif;
+  color: black;
 }
 
 .diamond {
   color: red;
-  font-size: 35px;
+  font-size: 45px;
 }
 
 .heart {
   color: red;
-  font-size: 35px;
+  font-size: 45px;
 }
 
 .spade {
   color: black;
-  font-size: 35px;
+  font-size: 45px;
 }
 
 .clover {
   color: black;
-  font-size: 35px;
+  font-size: 45px;
+}
+
+button {
+  background-color: rgb(28, 63, 28);
 }
