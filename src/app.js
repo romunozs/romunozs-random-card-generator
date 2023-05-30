@@ -10,36 +10,32 @@ function getRandomInteger(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-function getCardSuite(number) {
-  let card = "";
-  switch (number) {
-    case 1:
-      card = "&#x2764;"; //rojo
-      break;
-    case 2:
-      card = "&#x2660;";
-      break;
-    case 3:
-      card = "&#x25C6;"; //rojo
-      break;
-    case 4:
-      card = "&#x2663;"; //negro
-      break;
+
+function assignClassAndContent(ids, number) {
+  const classMapping = {
+    1: { className: "heart", card: "&#x2764;" },
+    2: { className: "spade", card: "&#x2660;" },
+    3: { className: "diamond", card: "&#x25C6;" },
+    4: { className: "clover", card: "&#x2663;" }
+  };
+
+  const { className, card = "" } = classMapping[number];
+
+  for (let i = 0; i < ids.length; i++) {
+    const element = document.getElementById(ids[i]);
+    if (element) {
+      element.classList.add(className);
+      element.innerHTML = card;
+    }
   }
-  return card;
 }
-const cardSuiteText = document.getElementById("cardSuite");
+
+const cardIds = ["cardSuite1", "cardSuite2", "cardSuite3", "cardSuite4"];
 const cardNumberText = document.getElementById("cardNumber");
 
 window.onload = function() {
   let cardSuiteNumber = getRandomInteger(1, 4);
-  if (cardSuiteNumber === 3) {
-    cardSuiteText.classList.add("diamond");
-  }
-  //console.log(cardSuite);
-  let cardSuite = getCardSuite(cardSuiteNumber);
   let cardNumber = getRandomInteger(0, 12);
-  //console.log(cardNumber);
   cardNumberText.innerHTML = cardNumber;
-  cardSuiteText.innerHTML = cardSuite;
+  let cardSuiteDefinition = assignClassAndContent(cardIds, cardSuiteNumber);
 };

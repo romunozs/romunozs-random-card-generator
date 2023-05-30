@@ -10,14 +10,26 @@ body {
   background-color: white;
 }
 
-#cardSuite {
-  font-size: 35px;
-}
-
 .card-title {
   font-size: 55px;
 }
 
 .diamond {
   color: red;
+  font-size: 35px;
+}
+
+.heart {
+  color: red;
+  font-size: 35px;
+}
+
+.spade {
+  color: black;
+  font-size: 35px;
+}
+
+.clover {
+  color: black;
+  font-size: 35px;
 }
